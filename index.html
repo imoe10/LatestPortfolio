@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+	<title>Home</title>
+	<style type="text/css">
+			.text-js{
+  opacity: 0;
+}
+.cursor{
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: -5px;
+  width: 2px;
+  /* Change colour of Cursor Here */
+  background-color: white;
+  z-index: 1;
+  animation: flash 0.5s none infinite alternate;
+}
+@keyframes flash{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+	</style>
+
+	<script type="text/javascript">
+		function changeBg() {
+			document.getElementById("hero").style.backgroundColor = "#fff";
+			document.getElementById("intro").style.color = "#000";
+			document.getElementById("hero").style.transition = "background .4s";
+			document.getElementById("projects").style.backgroundColor = "#fff";
+			document.getElementById("projects").style.transition = "background .4s";
+		}
+
+		function defaultBg() {
+			document.getElementById("hero").style.background = "url('bg-portfolio3.mp4')";
+			document.getElementById("intro").style.color = "#fff";
+			document.getElementById("hero").style.transition = "background .2s";
+			document.getElementById("projects").style.background = "url('bg-portfolio3.mp4')";
+			document.getElementById("projects").style.transition = "background .2s";
+		}
+
+		function displaySecText() {
+			document.getElementById("text2").style.display = "block";
+			document.getElementById("text2").style.transition = "display .4s ease-in-out";
+			document.getElementById("text2").style.transform = "scale(6.5)";
+			document.getElementById("type-js").style.display = "none";
+			document.getElementById("text1").style.opacity = "0";
+			document.getElementById("text1").style.transition = "opacity .2s ease-in-out";
+		}
+		
+		function displayFirstText() {
+			document.getElementById("text2").style.display = "none";
+			document.getElementById("text2").style.transition = "display 0.2s ease-in-out";
+			document.getElementById("type-js").style.display = "block";
+			document.getElementById("text1").style.opacity = "100%";
+			document.getElementById("text1").style.transition = "opacity .12s ease-in-out";		
+		}
+
+		$(document).scroll(function() {
+  var y = $(this).scrollTop();
+  if (y > 800) {
+    $('.projects-section').fadeIn();
+  } else {
+    $('.projects-section').fadeOut();
+  }
+});
+
+	</script>
+</head>
+<body  onload="autoType()" >
+
+ 	<div class="phone">
+		<h1>Phone & Tablet Versions are Not Available Yet...</h1>
+	</div>
+
+
+	<header class="nav center">
+		<a href="portfolioLanding.html"><p class="logo">RashwanJr</p></a>
+		<div class="open-to-work">
+			<p>Open for freelancing work</p>
+		</div>
+		<input type="checkbox" name="" class="checkBtn">
+		<ol class="center">
+			<a href="./projects.html"><li>Projects</li></a>
+			<a href="./about.html"><li>About</li></a>
+		</ol>	
+	</header>
+	<!--
+	<video autoplay muted loop id="myvideo">
+			<source src="./bg-portfolio3.mp4" type="video/mp4">
+		</video>
+	-->
+
+
+	<section class="hero-section " id="hero">
+
+		<div id="type-js" class="type-js">
+		<h1 onmouseover="displaySecText()"  id="text1" class="text-js">Mohamed Rashwan</h1>
+		</div>
+		<h2 onmouseout ="displayFirstText()"  id="text2">Web Developer</h2>
+
+		<!--
+		<h1 id="intro">Hello World! I'm Mohamed a Passionate Software Engineer. I obtained my Bachelor's degree of Computer Science (Hons) at INTI International University Malaysia in 2021. I'm currently focusing on the field of frontend Web Development and JavaScript programming. I recently joined Gamma Creations co. ltd Thailand as a VBA programmer.</h1>
+		-->
+
+	</section>
+
+
+	<!--
+	<section onmouseover="changeBg()" onmouseout="defaultBg()" class="projects-section" id="projects">
+		<div class="projects-section-items">
+			<h2>Premium Language Center Website</h2>
+			<p>PLC is wholly owned and managed by Premium Entrepreneur Consultant Sdn Bhd and it is a four-star language centre. This website is a company profile that also includes their courses, a Step-by-Step application guidlines, and services they provide for their students. As an Intern at the company i took part in the development and maintainace of the website. | Using Wordpress |</p>
+		</div>		
+	</section>
+	-->
+	<section class="footer-section">
+		<div class="footer-section-item1">
+			<h2>LET'S WORK TOGETHER!</h2>
+			<a href="mailto:morashwan8@gmail.com" target="_blank"><h1>morashwan8@gmail.com</h1></a>
+			<h3>DESIGNED & DEVELOPED BY RASHWANJR 2022</h3>
+		</div>
+		<div class="footer-section-item2">
+			<a href="https://www.instagram.com/rashwanjr/" target="_blank"><h3>Instagram</h3></a>
+			<h3>•</h3>
+			<a href="https://www.linkedin.com/in/mohamed-rashwan-aa8ba01aa" target="_blank"><h3>Linkedin</h3></a>
+		</div>
+	</section>
+</body>
+</html>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script type="text/javascript">
+		function autoType(elementClass, typingSpeed){
+  var thhis = $(elementClass);
+  thhis.css({
+    "position": "relative",
+    "display": "inline-block"
+  });
+  thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+  thhis = thhis.find(".text-js");
+  var text = thhis.text().trim().split('');
+  var amntOfChars = text.length;
+  var newString = "";
+  thhis.text("|");
+  setTimeout(function(){
+    thhis.css("opacity",1);
+    thhis.prev().removeAttr("style");
+    thhis.text("");
+    for(var i = 0; i < amntOfChars; i++){
+      (function(i,char){
+        setTimeout(function() {        
+          newString += char;
+          thhis.text(newString);
+        },i*typingSpeed);
+      })(i+1,text[i]);
+    }
+  },1500);
+}
+
+$(document).ready(function(){
+  // Now to start autoTyping just call the autoType function with the 
+  // class of outer div
+  // The second paramter is the speed between each letter is typed.   
+  autoType(".type-js",200);
+});
+	
+
+</script>
+

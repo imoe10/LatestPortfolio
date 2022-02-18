@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>About me</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<style type="text/css">
+		.nav li:hover{
+			color: var(--main-font-color);
+		}
+	</style>
+	<script type="text/javascript">
+		function changeColors() {
+			document.getElementById("mBody").style.background = "#1A1A1A";
+			document.getElementById("mBody").style.transition = "background .8s";
+			document.getElementById("skills").style.color = "#94FC13";
+			document.getElementById("intro").style.color = "#EEEEEE";
+			document.getElementById("logo").style.color = "#fcf1f1b4";
+			document.getElementById("menu").style.color = "#fcf1f1b4";
+			document.getElementById("menu2").style.color = "#fcf1f1b4";
+			document.getElementById("lets").style.color = "#fcf1f1b4";
+			document.getElementById("policy").style.color = "#fcf1f1b4";
+			document.getElementById("insta").style.color = "#EEEEEE";
+			document.getElementById("dot").style.color = "#EEEEEE";
+			document.getElementById("linkedin").style.color = "#EEEEEE";
+			document.getElementById("email").style.color = "#EEEEEE";
+		}
+
+				function changeColorsToDefault() {
+			document.getElementById("mBody").style.background = "#EEEEEE";
+			document.getElementById("mBody").style.transition = "background .8s";
+			document.getElementById("skills").style.color = "#94FC13";
+			document.getElementById("intro").style.color = "#222831";
+			document.getElementById("logo").style.color = "#393E46";
+			document.getElementById("menu").style.color = "#393E46";
+			document.getElementById("menu2").style.color = "#393E46";
+			document.getElementById("lets").style.color = "#393E46";
+			document.getElementById("policy").style.color = "#393E46";
+			document.getElementById("insta").style.color = "#222831";
+			document.getElementById("dot").style.color = "#222831";
+			document.getElementById("linkedin").style.color = "#222831";
+			document.getElementById("email").style.color = "#222831";
+		}
+		
+	</script>
+</head>
+<body id="mBody" onload="startTimer()" style="background: #eee;">
+	<header class="nav center">
+		<a href="portfolioLanding.html"><p id="logo" style="color: var(--third-color);" class="logo">RashwanJr</p></a>
+		<input type="checkbox" name="" class="checkBtn">
+		<ol  class="center">
+			<a style="color: var(--third-color);"href="./projects.html"><li id="menu">Projects</li></a>
+			<a style="color: var(--third-color);"href="./about.html"><li id="menu2">About</li></a>
+		</ol>	
+	</header>
+	<section  class="about">
+		<p id="intro">Hello! I'm a self-motivated creative Software Engineer who loves to learn and code cool stuff from scratch. Currently focusing on the field of frontend web development and JavaScript programming.
+		When I'm not working I enjoy working-out, designing web pages, or watching a good movie.<span><a  style="text-decoration: underline; font-size: 20px;" href="mailto:morashwan8@gmail.com" target="_blank"> Let's create something special!</a><span></p>
+	</section>
+	<!--
+	<div class="skills">
+		<img src="js-format.png" id="img">
+		<img src="css-3.png" >
+		<img src="html.png" id="img2">
+		<img src="vb-file.png">
+		<img src="wordpress.png" id="img3">
+	</div>
+	<br><br>
+-->		
+	<div id="slideset2">
+		<div class="slideset">
+    		<h1 onmouseover="changeColors()" onmouseout="changeColorsToDefault()"  id="skills"><span>$Skills=</span>array("REACT","JavaScript","CSS","HTML","PHP","VBA","SQL","WORDPRESS","Figma");</h1>
+    	</div>
+	</div>
+	<section class="footer-section">
+		<div class="footer-section-item1">
+			<h2 id="lets" style="color:var(--third-color);">LET'S WORK TOGETHER!</h2>
+			<a href="mailto:morashwan8@gmail.com" target="_blank"><h1 id="email"style="color:var(--fourth-color);">morashwan8@gmail.com</h1></a>
+			<h3 id="policy" style="color:var(--third-color);">DESIGNED & DEVELOPED BY RASHWANJR 2021</h3>
+		</div>
+		<div class="footer-section-item2">
+			<a href="https://www.instagram.com/rashwanjr/" target="_blank"><h3 id="insta"style="color:var(--fourth-color);">Instagram</h3></a>
+			<h3 id="dot" style="color:var(--fourth-color);">•</h3>
+			<a href="https://www.linkedin.com/in/mohamed-rashwan-aa8ba01aa" target="_blank"><h3 id="linkedin" style="color:var(--fourth-color);">Linkedin</h3></a>
+		</div>
+	</section>
+
+</body>
+</html>
+<script type="text/javascript">
+	function displayNextImage() {
+              x = (x === images.length - 1) ? 0 : x + 1;
+              document.getElementById("img").src = images[x]; 
+              document.getElementById("img2").src = images2[x];
+              document.getElementById("img3").src = images3[x];
+          }
+
+          function displayPreviousImage() {
+              x = (x <= 0) ? images.length - 1 : x - 1;
+              document.getElementById("img").src = images[x];
+          }
+
+          function startTimer() {
+              setInterval(displayNextImage, 2000);
+          }
+
+          var images = [], x = -1;
+          images[0] = "sql-server.png";
+          images[1] = "js-format.png";
+
+          var images2 = [], x = -1;
+          images2[0] = "php.png";
+          images2[1] = "html.png";
+
+          var images3 = [], x = -1;
+          images3[0] = "atom.png";
+          images3[1] = "wordpress.png";
+
+</script>

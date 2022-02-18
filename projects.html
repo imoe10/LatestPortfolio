@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+  <style type="text/css">
+
+/* Design */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  font-family: var(--font);
+  color: var(--main-font-color);
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid var(--main-color);
+  background: transparent;
+}
+
+.btn:hover {
+  background: var(--sec-color);
+  transition: background .8s;
+  border: none;
+  color: var(--main-font-color);
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+	  
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+.card {
+  border-radius: 0.25rem;
+ 
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: transparent;
+  background-color: transparent ;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.card_content {
+  padding: 1rem;
+   background-color: #ffffff10;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+}
+
+.card_title {
+  font-family: var(--font);
+  color: var(--main-font-color);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  font-family: var(--font);
+  color: var(--sec-font-color);
+  font-size: 0.875rem;
+  line-height: 1.5;
+   margin-top: 1.25rem;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+  </style>
+	<title>Projects</title>
+</head>
+<body style="background: #1A1A1A;">
+	<header class="nav center">
+    <a href="portfolioLanding.html"><p class="logo">RashwanJr</p></a>
+    <input type="checkbox" name="" class="checkBtn">
+    <ol class="center">
+      
+      <a href="./projects.html"><li>Projects</li></a>
+      <a href="./about.html"><li>About</li></a>
+    </ol> 
+  </header>
+  <!--
+  <video autoplay muted loop id="myvideo">
+      <source src="bg-portfolio3.mp4" type="video/mp4">
+    </video>
+  -->
+	<section class="projects">
+  <ul class="cards">
+    <li class="cards_item">
+      <div class="card">
+        <div class="card_image"><img src="/img/loginPage.png"></div>
+        <div class="card_content">
+          <h2 class="card_title">SAMS</h2>
+          <p class="card_text">(Student & Agent Management System) is a software solution for staff and agents of Premium Entrepreneur Consultant Sdn Bhd Malaysia, that allows them to keep students records, manage their applications with Universities and update applications status. The software also provides analysis about number of submitted applications and number of agents registered. | Using PHP, MySQL, Html, Css and JavaScript | </p>
+   
+          <button onclick="window.location.href='https://sams.student.premium.edu.my/loginNew.php'" class="btn card_btn">Visit Site</button>
+        </div>
+      </div>
+    </li>
+    <li class="cards_item">
+      <div class="card">
+        <div class="card_image"><img src="/img/premium.png"></div>
+        <div class="card_content">
+          <h2 class="card_title">Premium Language Center Website</h2>
+          <p class="card_text">PLC is wholly owned and managed by Premium Entrepreneur Consultant Sdn Bhd and it is a four-star language centre. This website is a company profile that also includes their courses, a Step-by-Step application guidlines, and services they provide for their students. As an Intern at the company i took part in the development and maintainace of the website. | Using Elementor | </p>
+          <br>
+          <button onclick="window.location.href='https://www.premium.edu.my'" class="btn card_btn">Visit Site</button>
+        </div>
+      </div>
+    </li>
+    <li class="cards_item">
+      <div class="card">
+        <div class="card_image"><img src="/img/Frame 2.png"></div>
+        <div class="card_content">
+          <h2 class="card_title">Funny Jokes Android App</h2>
+          <p class="card_text">Funny Jokes is an entertainment app that has many funny jokes for you to laugh. It has a couple of awesome features that add a taste of joyful to the app. Funny Jokes has a background music that can be turned off based on the users' prefrences. Also, recently we have added human-voice to jokes that makes the funny jokes even funnier. Funny Jokes is now available on Google Play. | This app was developed using Unity | </p>
+          <button onclick="window.location.href='shorturl.at/wHJL2'" class="btn card_btn">Download app</button>
+        </div>
+      </div>
+    </li> 
+    <li class="cards_item">
+      <div class="card">
+        <div class="card_image"><img style="opacity: 0.2;" src="https://images.pexels.com/photos/10279422/pexels-photo-10279422.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"></div>
+        <div class="card_content">
+          <h2 class="card_title">Young Explorer Nursery Website</h2>
+          <p class="card_text">Project under development. </p>
+          <button onclick="window.location.href='shorturl.at/wHJL2'" class="btn card_btn">Visit Website</button>
+        </div>
+      </div>
+    </li> 
+    <li class="cards_item">
+      <div class="card">
+        <div class="card_image"><img style="opacity: 0.2;" src="https://images.pexels.com/photos/691046/pexels-photo-691046.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"></div>
+        <div class="card_content">
+          <h2 class="card_title">Gamma Creations co,. ltd website</h2>
+          <p class="card_text">Project under development. </p>
+          <button onclick="window.location.href='shorturl.at/wHJL2'" class="btn card_btn">Visit Website</button>
+        </div>
+      </div>
+    </li> 
+  </ul>
+  </section>
+ 
+ <!--
+   <section class="uidesign">
+    <div class="uidesign-box">
+      <h1 style="opacity: 60%;">━UI Design</h1>
+      <h1 style="opacity: 60%; margin-top: -55px;">━UI Design</h1>
+      <h1 style="margin-left: -10px;  margin-top: -50px; opacity: 10%;">━UI Design</h1>
+      <img src="./public/Online Store Landing Page.png" alt="">
+      <img src="./public/Nursery Landing Page.png" alt="">
+      <img src="./public/Travel Agency Landing Page.png" alt="">
+      <img src="./public/Gym Landing Page.png" alt="">
+    </div>
+  </section>
+-->
+</body>
+</html>
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>

@@ -619,10 +619,10 @@ background-color: #1A1A1A;
   transform: translate(-50%, -50%);
 	font-family: var(--font);
 }
+}
 
-	
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) { 
-	.phone {
+@media only screen and (min-width: 414px) and (max-width: 767px) { 
+.phone {
 	background-color: var(--sec-color);
 	color: black;
 	height: 100vh;
@@ -632,7 +632,6 @@ background-color: #1A1A1A;
 	overflow: hidden;
 	text-align: center;
 	display: block;
-		overflow:hidden;
 }
 
 .phone h1 {
@@ -644,6 +643,7 @@ background-color: #1A1A1A;
 	font-family: var(--font);
 }
 }
+
 
 
 
